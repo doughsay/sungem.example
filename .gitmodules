@@ -1,0 +1,3 @@
+[submodule "sungem"]
+	path = sungem
+	url = git://github.com/doughsay/sungem.git
