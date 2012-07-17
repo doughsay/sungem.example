@@ -1,9 +1,6 @@
 <?php
 
 get('/admin', function() {
-	useLib('auth/session');
-	useLib('view/php');
-
 	auth\session\requireLogin('/admin/users/login/');
 
 	$username = sessionVar('admin_user');
@@ -17,8 +14,6 @@ get('/admin', function() {
 });
 
 get('/admin/users/login', function() {
-	useLib('view/php');
-
 	$html = view\php('layouts/html');
 	$login = view\php('admin/users/login');
 	$error = getVar('error', '0') === '1' ? true : false;
@@ -31,7 +26,6 @@ get('/admin/users/login', function() {
 
 post('/admin/users/login', function() {
 	useModel('users');
-	useLib('auth/session');
 
 	$username = postVar('username');
 	$password = postVar('password');
@@ -45,9 +39,6 @@ post('/admin/users/login', function() {
 });
 
 get('/admin/users/logout', function() {
-	useLib('auth/session');
-
 	auth\session\destroySession();
 	redirect('/admin/users/login/');
-	die();
 });

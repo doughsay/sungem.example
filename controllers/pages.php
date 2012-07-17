@@ -1,9 +1,6 @@
 <?php
 
 get('/pages/(\w+)', function($page) {
-	useLib('view/static');
-	useLib('view/php');
-
 	$titles = array(
 		'page1' => 'Simple Page 1',
 		'page2' => 'Simple Page 2'
@@ -14,6 +11,6 @@ get('/pages/(\w+)', function($page) {
 
 	$pageTitle = $titles[$page];
 	$html = view\php('layouts/html');
-	$content = view\static_('pages/'.$page);
+	$content = view\plain('pages/'.$page);
 	return $html(compact('pageTitle', 'content'));
 });

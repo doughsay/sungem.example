@@ -1,5 +1,11 @@
 <?php
 $core = array(
 	'debug' => true,
-	'title' => 'Sungem'
+	'title' => 'Sungem',
+	'autoloadLibs' => array(
+		'view/php',
+		'view/plain',
+		'db/mysql',
+		'auth/session'
+	)
 );

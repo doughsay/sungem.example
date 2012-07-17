@@ -1,7 +1,6 @@
 <?php
 
 get('/', function() {
-	useLib('view/php');
 	useModel('strings');
 
 	$strings = strings\getStrings();
@@ -20,8 +19,6 @@ get('/', function() {
 });
 
 get('/get_example/(\w+)/(\w+)', function($foo, $bar) {
-	useLib('view/php');
-
 	$html = view\php('layouts/html');
 	$page = view\php('home/get_example');
 
@@ -32,20 +29,15 @@ get('/get_example/(\w+)/(\w+)', function($foo, $bar) {
 });
 
 get('/post_example', function() {
-	useLib('view/php');
-	useLib('view/static');
-
 	$html = view\php('layouts/html');
 
 	return $html(array(
 		'pageTitle' => 'POST example',
-		'content' => view\static_('home/post_example')
+		'content' => view\plain('home/post_example')
 	));
 });
 
 post('/post_example', function() {
-	useLib('view/php');
-
 	$html = view\php('layouts/html');
 	$page = view\php('home/post_example');
 	$foo = postVar('foo');
@@ -58,7 +50,6 @@ post('/post_example', function() {
 });
 
 get('/json', function() {
-
 	$data = array(
 		'folder1' => array(
 			'file1',
