@@ -6,6 +6,7 @@ $core = array(
 		'view/php',
 		'view/plain',
 		'db/mysql',
-		'auth/session'
+		'auth/session',
+		'helpers/html'
 	)
 );

@@ -10,6 +10,8 @@ get('/', function() {
 
 	return $html(array(
 		'pageTitle' => 'Home',
+		'css' => 'basic',  // can be an array or a string
+		'js' => 'example', // ''
 		'content' => $index(array(
 			'foo' => 'This is foo!',
 			'bar' => 'And bar!',
