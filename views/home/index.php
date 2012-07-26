@@ -6,9 +6,8 @@
 <p><?php echo $bar; ?></p>
 
 <?php
-	$baz = view\php('partials/baz');
-	echo $baz(array('baz' => 'And this is baz!'));
-	echo $baz(array('baz' => 'This is a second call to baz!'));
+	echo view\php\partial('baz', array('baz' => 'And this is baz!'));
+	echo view\php\partial('baz', array('baz' => 'This is a second call to baz!'));
 ?>
 
 <p>
