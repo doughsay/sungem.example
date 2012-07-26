@@ -68,3 +68,14 @@ get('/json', function() {
 
 	return json($data);
 });
+
+get('/spreadsheet', function() {
+	useModel('spreadsheet');
+	$html = view\php('layouts/html');
+	$page = view\php('home/spreadsheet');
+
+	return $html(array(
+		'pageTitle' => 'Spreadsheet example',
+		'content' => $page(array('data' => spreadsheet\get()))
+	));
+});

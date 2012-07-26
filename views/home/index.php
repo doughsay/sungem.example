@@ -29,5 +29,6 @@
 	<li><a href='/post_example'>form post example</a></li>
 	<li><a href='/json'>Some JSON data</a></li>
 	<li><a href='/download/example.png'>Example file download</a></li>
+	<li><a href='/spreadsheet'>Data from a google spreadsheet</a></li>
 	<li><a href='/admin'>Admin login</a></li>
 </ul>
