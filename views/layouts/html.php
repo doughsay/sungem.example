@@ -1,5 +1,6 @@
 <?php
 /* html($pageTitle, $content, $js, $css): */
+use helpers\html;
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +10,7 @@
 			- <?php echo $pageTitle; ?>
 		</title>
 
-		<?php if(isset($css)) { echo helpers\html\css($css); }?>
+		<?php if(isset($css)) { echo html\css($css); }?>
 	</head>
 	<body>
 		<h1><?php echo getConfigVar('core', 'title'); ?></h1>
@@ -20,5 +21,5 @@
 		</div>
 	</body>
 
-	<?php if(isset($js)) { echo helpers\html\js($js); }?>
+	<?php if(isset($js)) { echo html\js($js); }?>
 </html>
