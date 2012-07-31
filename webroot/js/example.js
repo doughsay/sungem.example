@@ -1,1 +1,1 @@
-alert('js test!');
+console.log('js test!');
