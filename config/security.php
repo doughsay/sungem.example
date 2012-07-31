@@ -1,4 +1,4 @@
 <?php
-$security = array(
+$security = [
 	'salt' => 'supersecretsalt-'
-);
+];

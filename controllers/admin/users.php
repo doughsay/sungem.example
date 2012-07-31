@@ -7,10 +7,10 @@ get('/admin', function() {
 	$html = view\php('layouts/html');
 	$page = view\php('admin/users/index');
 
-	return $html(array(
+	return $html([
 		'pageTitle' => 'Admin Section',
 		'content' => $page(compact('username'))
-	));
+	]);
 });
 
 get('/admin/users/login', function() {
@@ -18,10 +18,10 @@ get('/admin/users/login', function() {
 	$login = view\php('admin/users/login');
 	$error = getVar('error', '0') === '1' ? true : false;
 
-	return $html(array(
+	return $html([
 		'pageTitle' => 'Login',
 		'content' => $login(compact('error'))
-	));
+	]);
 });
 
 post('/admin/users/login', function() {

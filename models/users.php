@@ -14,10 +14,10 @@ function validUser($username, $password) {
 			AND password = :password
 	";
 
-	$params = array(
+	$params = [
 		':username' => $username,
 		':password' => $saltedPassword
-	);
+	];
 
 	$user = mysql\fetch($query, $params);
 	return $user['valid'] == '1';

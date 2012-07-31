@@ -1,12 +1,12 @@
 <?php
-$core = array(
+$core = [
 	'debug' => true,
 	'title' => 'Sungem',
-	'autoloadLibs' => array(
+	'autoloadLibs' => [
 		'view/php',
 		'view/plain',
 		'db/mysql',
 		'auth/session',
 		'helpers/html'
-	)
-);
+	]
+];
